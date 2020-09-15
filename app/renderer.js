@@ -26,5 +26,6 @@ openFileButton.addEventListener("click", () => {
 });
 
 ipcRenderer.on("file-opened", (event, file, content) => {
-  console.log(event, file, content);
+  markdownView.value = content;
+  renderMarkdownToHtml(content);
 });
