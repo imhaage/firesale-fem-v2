@@ -25,11 +25,8 @@ exports.getFileFromUser = () => {
   const files = dialog.showOpenDialog({
     properties: ["openFile"],
     buttonLabel: "Import",
-    title: "Import file"
-    /* filters: [
-      { name: "Markdown", extensions: ["md", "markdown", "mdown"] },
-      { name: "Text", extensions: ["txt", "text"] }
-    ] */
+    title: "Import file",
+    filters: [{ name: "Markdown", extensions: ["md", "markdown", "mdown"] }]
   });
 
   if (!files) return;
